@@ -316,7 +316,7 @@
         <li><a href="#home">HOME</a></li>
         <li><a href="#download">DOWNLOAD</a></li>
         <li><a href="#features">FEATURES</a></li>
-        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
         <li><a href="https://ko-fi.com/sasindukaveeshagamapathirana30053" target="_blank" class="coffee-btn">❤️ Support Me</a></li>
       </ul>
     </nav>
@@ -451,6 +451,25 @@
           }
         });
       });
+
+      // Force navigation for pages where link clicks may be blocked (VSCode webview, some embed viewers)
+      (function(){
+        const faqAnchors = document.querySelectorAll('a[href$="faq.html"], a[href$="./faq.html"]');
+        faqAnchors.forEach(a => {
+          a.addEventListener('click', function(e){
+            // Allow normal navigation first (no preventDefault), but also set a fallback
+            setTimeout(() => {
+              try {
+                // if location didn't change, force it
+                const loc = window.location.href;
+                if (!loc.endsWith('faq.html')) {
+                  window.location.href = new URL(a.getAttribute('href'), window.location.href).href;
+                }
+              } catch (err) { /* ignore */ }
+            }, 200);
+          });
+        });
+      })();
     </script>
   </body>
 </html>
