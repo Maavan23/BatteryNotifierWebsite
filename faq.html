@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battery Notifier — FAQ</title>
+    <link rel="icon" type="image/svg+xml" href="battery_icon.svg">
+    <style>
+      *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+      body{background:linear-gradient(135deg,#1a0033 0%,#2d0852 50%,#1a0033 100%);color:#fff;min-height:100vh}
+      nav{background:rgba(0,0,0,.3);backdrop-filter:blur(8px);padding:14px 28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+      .logo{font-weight:700;color:#a78bfa;text-decoration:none}
+      .nav-links{display:flex;gap:20px;list-style:none}
+      .nav-links a{color:#eae6ff;text-decoration:none}
+      main{padding:48px 20px;max-width:1000px;margin:0 auto}
+      .page-title{font-size:2rem;margin-bottom:18px;background:linear-gradient(135deg,#fff,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+      .faq{background:rgba(255,255,255,0.03);border:1px solid rgba(167,139,250,0.12);border-radius:12px;padding:28px}
+      .faq-item{margin-bottom:18px}
+      .faq-item h3{color:#c7b7fb;margin-bottom:6px;font-size:1.05rem}
+      .faq-item p{color:#d8cfee;font-size:.96rem}
+      .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600}
+      .btn-primary{background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff}
+      footer{padding:24px;text-align:center;color:#b8a5f2;background:rgba(0,0,0,0.18);margin-top:40px}
+      @media(max-width:720px){.page-title{font-size:1.6rem}}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="logo" href="index.html">⚡ Battery Notifier</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#download">Download</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://ko-fi.com/sasindukaveeshagamapathirana30053" target="_blank">❤️ Support Me</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="page-title">Frequently Asked Questions</h1>
+
+      <section class="faq">
+        <div class="faq-item">
+          <h3>What is Battery Notifier?</h3>
+          <p>Battery Notifier is a lightweight desktop application that delivers desktop notifications and optional sound alerts when your battery reaches configurable low or full thresholds. It runs in the system tray and can optionally auto-start on Windows sign-in.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What's new in v1.6?</h3>
+          <p>v1.6 improves application stability and runtime reliability, fixes asset path resolution for bundled resources (battery_icon.ico, short_bell.mp3), ensures user data (settings.json, history.json) is stored persistently in <code>%APPDATA%\BatteryNotifier</code>, and resolves startup conflicts with PyInstaller frozen executables.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Features</h3>
+          <p>Desktop notifications for low/full battery, configurable thresholds, sound alarm with repeat limiting, notification history viewer, silent system tray mode, and optional auto-start on Windows boot.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Installation</h3>
+          <p>Download the installer (e.g., <code>BatteryNotifier_v1_6_Setup.exe</code>) from the Releases page, run the installer, and follow the on-screen steps. The app will appear in your system tray after installation.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>System Requirements</h3>
+          <p>Windows 10 / 11 (64-bit). No additional software required — the installer is self-contained.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Where are my settings stored?</h3>
+          <p>User data such as <code>settings.json</code> and <code>history.json</code> are stored in <code>%APPDATA%\BatteryNotifier</code> so they survive reinstalls and updates.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How can I download the latest release?</h3>
+          <p>The download button on the main site links to the latest release. You can also visit the project's releases: <a href="https://github.com/Maavan23/BatteryNotifierWebsite/releases" target="_blank">Releases</a>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Support / Donations</h3>
+          <p>If you'd like to support development, use the Ko‑fi link: <a href="https://ko-fi.com/sasindukaveeshagamapathirana30053" target="_blank">https://ko-fi.com/sasindukaveeshagamapathirana30053</a>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Author</h3>
+          <p>Created by Sasindu Kaveesha Gamapathirana.</p>
+        </div>
+
+      </section>
+
+      <p style="margin-top:20px;text-align:center"><a class="btn btn-primary" href="index.html#download">⬇️ Back to Download</a></p>
+
+    </main>
+
+    <footer>
+      &copy; 2026 Battery Notifier | <a href="https://github.com/Maavan23/BatteryNotifierWebsite" target="_blank" style="color:#a78bfa;text-decoration:none;">View on GitHub</a>
+    </footer>
+  </body>
+</html>
