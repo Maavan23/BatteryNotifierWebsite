@@ -1,0 +1,27 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#3b82f6" opacity="0.1"/>
+  
+  <!-- Battery body -->
+  <rect x="50" y="60" width="90" height="60" rx="6" fill="none" stroke="#3b82f6" stroke-width="4"/>
+  
+  <!-- Battery terminal -->
+  <rect x="142" y="80" width="8" height="20" rx="2" fill="#3b82f6"/>
+  
+  <!-- Battery fill (animated effect with gradient) -->
+  <defs>
+    <linearGradient id="batteryGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Battery fill level (85% charged) -->
+  <rect x="54" y="64" width="77" height="52" rx="4" fill="url(#batteryGradient)"/>
+  
+  <!-- Highlight/shine effect -->
+  <rect x="54" y="64" width="77" height="12" rx="4" fill="#60a5fa" opacity="0.4"/>
+  
+  <!-- Charging bolt icon inside battery -->
+  <path d="M 100 75 L 95 90 L 100 90 L 95 105 L 110 85 L 105 85 L 110 75 Z" fill="#fbbf24" opacity="0.9"/>
+</svg>
