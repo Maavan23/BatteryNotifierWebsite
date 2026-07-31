@@ -587,25 +587,10 @@
 
         <!-- Download Package Tabs -->
         <div class="max-w-4xl mx-auto">
-          <!-- Tab Navigation Buttons -->
-          <div class="flex flex-wrap justify-center gap-2 mb-8 p-1.5 rounded-2xl bg-white/5 border border-white/10 max-w-xl mx-auto">
-            <button id="tab-btn-installer" class="dl-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-lg shadow-brand-600/30" onclick="switchDownloadTab('installer')">
-              Installer (.exe)
-            </button>
-            <button id="tab-btn-portable" class="dl-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white hover:bg-white/5" onclick="switchDownloadTab('portable')">
-              Portable (.zip)
-            </button>
-            <button id="tab-btn-winget" class="dl-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white hover:bg-white/5" onclick="switchDownloadTab('winget')">
-              CLI (Winget)
-            </button>
-            <button id="tab-btn-source" class="dl-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white hover:bg-white/5" onclick="switchDownloadTab('source')">
-              Source Code
-            </button>
-          </div>
+          <!-- Download Content -->
+          <div class="max-w-4xl mx-auto">
 
-          <!-- Tab Content Containers -->
-          
-          <!-- Tab 1: Installer -->
+          <!-- Installer Content -->
           <div id="tab-content-installer" class="dl-tab-content glass-panel rounded-2xl p-8 border border-white/10 text-center">
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-emerald-500 p-[1px] mx-auto mb-4">
               <div class="w-full h-full bg-[#090514] rounded-[15px] flex items-center justify-center">
@@ -633,57 +618,6 @@
               SHA256: <span class="text-brand-300">a3f9e871b9c23102d...7f1a8e9</span>
             </div>
           </div>
-
-          <!-- Tab 2: Portable -->
-          <div id="tab-content-portable" class="dl-tab-content glass-panel rounded-2xl p-8 border border-white/10 text-center hidden">
-            <div class="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-            </div>
-            <h3 class="font-display font-bold text-2xl text-white mb-2">Standalone Portable Package</h3>
-            <p class="text-slate-300 text-sm max-w-lg mx-auto mb-6">
-              No installation or administrative rights required. Extract the ZIP archive anywhere and launch.
-            </p>
-
-            <a href="https://github.com/Maavan23/BatteryNotifierWebsite/releases/download/v1.6.1/BatteryNotifier-Portable.zip" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-base shadow-xl shadow-amber-500/20 transition-all hover:scale-105">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-              <span>Download Portable ZIP (12.8 MB)</span>
-            </a>
-          </div>
-
-          <!-- Tab 3: Winget -->
-          <div id="tab-content-winget" class="dl-tab-content glass-panel rounded-2xl p-8 border border-white/10 text-center hidden">
-            <div class="w-16 h-16 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            </div>
-            <h3 class="font-display font-bold text-2xl text-white mb-2">Windows Package Manager (Winget)</h3>
-            <p class="text-slate-300 text-sm max-w-lg mx-auto mb-4">
-              Run this single command in PowerShell or Windows Terminal to install:
-            </p>
-
-            <div class="max-w-md mx-auto bg-black/60 rounded-xl p-4 border border-white/10 flex items-center justify-between font-mono text-sm text-emerald-400">
-              <code>winget install Maavan.BatteryNotifier</code>
-              <button onclick="copyWinget()" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 transition-colors">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- Tab 4: Source -->
-          <div id="tab-content-source" class="dl-tab-content glass-panel rounded-2xl p-8 border border-white/10 text-center hidden">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-            </div>
-            <h3 class="font-display font-bold text-2xl text-white mb-2">Build from Source Code</h3>
-            <p class="text-slate-300 text-sm max-w-lg mx-auto mb-6">
-              Written cleanly in C# / .NET 6.0 with WPF UI. Feel free to inspect, fork, or contribute on GitHub.
-            </p>
-
-            <a href="https://github.com/Maavan23/BatteryNotifierWebsite" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 transition-all">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              <span>View GitHub Repository</span>
-            </a>
-          </div>
-
         </div>
       </section>
 
@@ -1027,18 +961,6 @@
       capSlider.addEventListener('input', updateCalculator);
       hoursSlider.addEventListener('input', updateCalculator);
 
-      // DOWNLOAD TAB SWITCHING
-      function switchDownloadTab(tabName) {
-        document.querySelectorAll('.dl-tab-btn').forEach(btn => {
-          btn.className = 'dl-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white hover:bg-white/5';
-        });
-        document.querySelectorAll('.dl-tab-content').forEach(content => {
-          content.classList.add('hidden');
-        });
-
-        document.getElementById(`tab-btn-${tabName}`).className = 'dl-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-lg shadow-brand-600/30';
-        document.getElementById(`tab-content-${tabName}`).classList.remove('hidden');
-      }
 
       function copyChecksum() {
         navigator.clipboard.writeText('a3f9e871b9c23102d841e021a8f9c1042e8d19a7e6b8c19f2a03e1b7f1a8e9');
